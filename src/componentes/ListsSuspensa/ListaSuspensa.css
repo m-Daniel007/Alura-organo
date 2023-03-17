@@ -21,3 +21,6 @@
     border-radius: 15px;
 }
 
+.lista-suspensa option{
+    background-color:rgba(221, 229, 234, 0.500) ;
+}

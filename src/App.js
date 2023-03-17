@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner/";
 import Formulario from "./componentes/Formulario";
+import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 
 function App(props) {
@@ -45,7 +46,7 @@ function App(props) {
   ];
 
   const aoNovoColaborador = (colaborador) => {
-    console.log(colaborador);
+
     setColaboradores([...colaboradores, colaborador]);
   };
 
@@ -64,8 +65,10 @@ function App(props) {
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           nome={time.nome}
+          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
         />
       ))}
+      <Rodape/>
     </div>
   );
 }
